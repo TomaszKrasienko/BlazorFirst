@@ -51,7 +51,6 @@ else
     {
         btnText =  Id == null ? "Save New Hero" : "Update Hero";
         await _superHeroService.GetComics();
-        Console.WriteLine(_superHeroService.Comics);
     }
     protected override async Task OnParametersSetAsync()
     {
