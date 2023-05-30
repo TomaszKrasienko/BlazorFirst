@@ -28,8 +28,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/mac/Documents/Projects/PrivateGitRepos/BlazorFirst/BlazorWebFullstackCrud/BlazorWebFullstackCrud/Client/Pages/Hero.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSGVyby5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/mac/Documents/Projects/PrivateGitRepos/BlazorFirst/BlazorWebFullstackCrud/BlazorWebFullstackCrud/Client/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mac/Documents/Projects/PrivateGitRepos/BlazorFirst/BlazorWebFullstackCrud/BlazorWebFullstackCrud/Client/Pages/SuperHeroes.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU3VwZXJIZXJvZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/mac/Documents/Projects/PrivateGitRepos/BlazorFirst/BlazorWebFullstackCrud/BlazorWebFullstackCrud/Client/Shared/SurveyPrompt.razor]
