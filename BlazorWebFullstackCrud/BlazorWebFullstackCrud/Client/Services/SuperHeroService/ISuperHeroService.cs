@@ -9,4 +9,7 @@ public interface ISuperHeroService
     Task GetComics();
     Task GetSuperHeroes();
     Task<SuperHero> GetSingleHero(int id);
+    Task CreateHero(SuperHero superHero);
+    Task UpdateHero(int id, SuperHero superHero);
+    Task DeleteHero(int id);
 }

@@ -30,14 +30,15 @@ else
     <div>
         <label>Comic</label>
         <InputSelect @bind-Value="hero.ComicId" class="form-select">
-            @foreach(var comic in _superHeroService.Comics)
+            @foreach (var comic in _superHeroService.Comics)
             {
                 <option value="@comic.Id">@comic.Name</option>
             }
         </InputSelect>
     </div>
-    <br/>
-    <button type="submit" class="btn btn-primary">@btnText</button> 
+    <br />
+    <button type="submit" class="btn btn-primary">@btnText</button>
+    <button type="button" class="btn btn-danger" @onclick="DeleteHero">Delete Hero</button>
 </EditForm>
 
 @code {
@@ -56,7 +57,8 @@ else
     {
         if (Id is null)
         {
-            //Create a new hero 
+            hero.Comic = _superHeroService.Comics[0];
+            hero.ComicId = hero.Comic.Id;
         }
         else
         {
@@ -66,7 +68,19 @@ else
 
     async Task HandleSubmit()
     {
-
+        if(Id == null)
+        {
+            await _superHeroService.CreateHero(hero);
+        }
+        else
+        {
+            await _superHeroService.UpdateHero(hero.Id, hero);
+        }
+    }
+    
+    async Task DeleteHero()
+    {
+        await _superHeroService.DeleteHero(hero.Id);
     }
 
 }

@@ -1,18 +1,18 @@
 @page "/SuperHeroes"
 @inject ISuperHeroService SuperHeroService
-@inject NavigationManager _navigationManager;
+@inject NavigationManager _navigationManager
 <PageTitle>Super Heroes</PageTitle>
 <h3>Super Heroes</h3>
 <table class="table">
-    <header>
+    <thead>
         <tr>
-            <th>First Name</th>            
+            <th>First Name</th>
             <th>Last Name</th>
             <th>Hero Name</th>
-            <th>Comic</th>            
+            <th>Comic</th>
             <th></th>
         </tr>
-    </header>
+    </thead>
     <tbody>
         @foreach (var hero in SuperHeroService.Heroes)
         {
@@ -28,7 +28,7 @@
         }
     </tbody>
 </table>
-
+<button class="btn btn-primary" @onclick="CreateNewHero">Create New Hero</button>
 
 @code {
     protected override async Task OnInitializedAsync()
@@ -39,5 +39,10 @@
     void ShowHero(int id)
     {
         _navigationManager.NavigateTo($"hero/{id}");
+    }
+
+    void CreateNewHero()
+    {
+        _navigationManager.NavigateTo("hero");
     }
 }
